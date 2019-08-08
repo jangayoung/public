@@ -1,0 +1,393 @@
+
+* { font-family : monospace }
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.btn {
+  position: relative;
+  left:200px;
+  top:50px;
+  width: 140px;
+  height: 45px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: white;
+  background-color: #3e6f97;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  }
+
+.btn:hover {
+  background-color: #3e6f97;
+  box-shadow: 0px 15px 20px #284358;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+ .hours,.minutes{
+ max-width:280px;
+ height:280px;
+  border-radius: 50%;
+  margin : 30px auto;
+  position: relative;
+  background-color: rgb(228,228,228);
+
+}
+
+.number_h_min,.number_h_am{
+  position:absolute; 
+  font-size:15px;
+  color:black;
+  z-index: 1;
+}
+.number_h_min:hover,.number_h_am:hover{
+  color:black;
+  
+}
+
+.number_h_pm:hover{
+  opacity: 0.5;
+}
+
+.number_h_pm{
+  position:absolute; 
+  font-size:15px;
+  opacity: 0.5;
+  color:black;
+  
+}
+
+
+.MINdiv{
+  font-size: 1em;
+  line-height: 0;
+  position: relative;
+  transform-origin: center 100%;
+  top: 10.5em;
+  left: 0;
+  padding: 0 0.5em;
+  z-index: 1;
+  opacity: 0;
+  
+}
+
+.MINdiv:hover{
+  opacity: 0.5;
+  }
+  
+
+#number12,#minnumber00{
+  right:0;
+  left:0;
+  top:5px;
+  text-align: center; 
+} 
+
+#number24{
+  right:0;
+  left:0;
+  top:60px;
+  text-align:center;
+}
+
+
+#number6,#minnumber30{
+  right:0;
+  left:0;
+  bottom:5px;
+  text-align: center; 
+} 
+#number18{
+  right:0;
+  left:0;
+  bottom:60px;
+  text-align: center;
+}
+
+#number3,#minnumber15{
+  top:0;
+  bottom:0;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  right:10px;
+}
+#number15{
+  top:0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  right:60px;
+}
+#number9,#minnumber45 {
+  top:0;
+  bottom:0;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  left:10px;
+}
+#number21{
+  top:0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  left:60px;
+}
+
+#number1,#minnumber05{
+  top : calc(140px - 120px);
+  right : calc(140px - 70px);
+}
+#number13{
+  top : calc(140px - 70px);
+  right : calc(140px - 45px);
+  
+}
+#number23{
+  top : calc(140px - 70px);
+  left : calc(140px - 45px);
+}
+
+
+#number11,#minnumber55{
+  top:calc(140px - 120px);
+  left:calc(140px - 70px);
+}
+#number2,#minnumber10{
+  top:calc(140px - 75px);
+  right:calc(140px - 110px);
+}
+#number14{
+  top:calc(140px - 45px);
+  right:calc(140px - 70px);
+}
+#number22{
+  top:calc(140px - 45px);
+  left:calc(140px - 70px);
+}
+#number10,#minnumber50{
+  top:calc(140px - 75px);
+  left:calc(140px - 110px);
+}
+
+#number4,#minnumber20{
+  bottom:calc(140px - 70px);
+  right:calc(140px - 110px);
+}
+#number16{
+  bottom:calc(140px - 45px);
+  right:calc(140px - 70px);
+}
+#number20{
+  bottom:calc(140px - 45px);
+  left:calc(140px - 70px);
+}
+#number8,#minnumber40{
+  bottom:calc(140px - 75px);
+  left:calc(140px - 110px);
+}
+#number5,#minnumber25{
+  bottom:calc(140px - 120px);
+  right:calc(140px - 70px);
+}
+#number17{
+  bottom:calc(140px - 75px);
+  right:calc(140px - 45px);
+}
+#number19{
+  bottom:calc(140px - 75px);
+  left:calc(140px - 45px);
+}
+#number7,#minnumber35{
+  bottom:calc(140px - 120px);
+  left:calc(140px - 70px);
+}
+
+#minute{
+  position: absolute;
+  height:95px;
+  width:2px;
+  left:0px;
+  right:0px;
+  margin:auto;
+  background:#3e6f97; ;
+  bottom:140px;
+  rotate : transform(0deg);
+  transform-origin: center 100%;
+
+}
+
+#hour{
+  position: absolute;
+  height:60px;
+  width:3px;
+  left:0px;
+  right:0px;
+  margin:auto;
+  background:#3e6f97; ;
+  bottom:140px;
+  rotate : transform(0deg);
+  transform-origin: center 100%;
+  
+}
+
+
+#center{
+  position :absolute;
+  width:10px;
+  height:10px;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#3e6f97; ;
+  margin:auto;
+  border-radius:50%;
+  z-index: 999;
+}
+.modal{
+  position: relative;
+  width: 400px;
+  height: 700px;
+  background-color:white;
+  margin:0.4em 0.4em;
+  box-shadow: 0px 0px 20px #000;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+
+}
+.modal>#showday{
+  max-width:400px;
+  height:20px;
+  color:white;
+  text-align: center;
+  padding-top: 6px;
+  font-size:10pt;
+  background-color:  #30516d;
+}
+.modal>#showmonth{
+  max-width:400px;
+  height:40px;
+  padding-top:13px;
+  font-size:15pt;
+  text-align: center;
+  color:white;
+  background-color:  #3e6f97; 
+}
+
+.modal>#showdate{
+  max-width:400px;
+  height:60px;
+  font-size:30pt;
+  padding-top:15px;
+  text-align: center;
+
+  color:white;
+  background-color: #3e6f97; 
+}
+
+.modal>#showclock{
+  max-width:400px;
+  height:60px;
+
+  font-size:15pt;
+  text-align: center;
+  color:lightgrey;
+  background-color : #3e6f97; 
+}
+
+#calendar_tb{
+  width:300px;
+  height:300px;
+  color:rgb(117,117,117);
+  text-align: center;
+  padding:1em; 
+}
+#calendar_tb1{
+  padding:1em;
+  font-size:15pt;
+  color:rgb(117,117,117);
+  width:300px;
+
+  
+}
+.modalbtn{
+  text-align: right;
+  padding:2em;
+  position: relative;
+ 
+}
+#day{
+    font-weight: bold;
+}
+
+#todayLabel,#calendarYear,#calendarMon{
+  font-weight: bold;
+}
+
+.pop_bt_cancle,.pop_bt_ok{
+  color:rgb(42,42,42);
+  display:inline-block;
+  font-size:6pt;
+
+}
+
+.pop_bt_cancle:after ,.pop_bt_ok:after{
+  display:block;
+  content: '';
+  border-bottom: solid 1px #3e6f97;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+
+.pop_bt_cancle:hover:after,.pop_bt_ok:hover:after{
+  transform:scaleX(1);
+}
+.select_Day{
+  background: #6797df;
+  border-radius:50%;
+  color:white;
+
+
+}
+
+#Cal{
+  float:left;
+  padding:1em;
+}
+#Clo{
+  float: right;
+  padding:1em;
+}
+#Cal:hover,#Clo:hover,#showhour:hover,#showmin:hover{
+  opacity: 0.5;
+}
+
+.sel:hover{
+  background-color: #3e6f97; 
+  opacity: 0.5;
+  color:white;
+  border-radius: 50%;
+} 
+#fin{
+  position: relative;
+  left:200px;
+  top:100px;
+  width: 140px;
+  height: 45px;
+  font-size: 20px;
+}
