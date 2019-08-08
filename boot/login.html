@@ -1,0 +1,32 @@
+<html>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script> <!-- 레이어 팝업에 필요한 jquery소스파일 -->
+
+<script type="text/javascript">
+
+	$(document).ready(function() {
+
+		$('#close').click(function() {  //close라는 영역을 클릭했을때,
+
+			$('#popup').hide();        //popup이라는 영역을 사라지게(혹은 숨겨지도록)
+
+		});
+
+	});
+
+ </script>
+ <body>
+
+<div id="popup" class="main_pop">
+<div id="contents" style="height:360px;">
+
+  <a href="#"><img src="URL" border=0></a>
+</div>
+<div id="close" style="width:50px; margin:auto;">
+  close
+</div>
+
+</div>
+
+</body>
+</html>

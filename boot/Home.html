@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>SLOTTET</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <script src='js/jquery-1.10.2.js' type="text/javascript"></script>
+  <script src='js/jquery-ui.custom.min.js' type="text/javascript"></script>
+  <script src='js/fullcalendar.js' type="text/javascript"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<div class="container">
+  <script>
+  // Load the Visualization API and the corechart package.
+       google.charts.load('current', {'packages':['corechart']});
+
+       // Set a callback to run when the Google Visualization API is loaded.
+       google.charts.setOnLoadCallback(drawChart);
+
+       // Callback that creates and populates a data table,
+       // instantiates the pie chart, passes in the data and
+       // draws it.
+       function drawChart() {
+
+         // Create the data table.
+         var data = new google.visualization.DataTable();
+         data.addColumn('string', 'Topping');
+         data.addColumn('number', 'Slices');
+         data.addRows([
+           ['SOUTH KOREA', 3],
+           ['NORWAY', 2],
+           // ['Olives', 1],
+           // ['Zucchini', 1],
+           // ['Pepperoni', 2]
+         ]);
+
+         // Set chart options
+         var options = {'title':'Where are we from?',
+                        'width':700,
+                        'height':400};
+
+         // Instantiate and draw our chart, passing in some options.
+         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+         chart.draw(data, options);
+       }
+     </script>
+
+   </div>
+
+</head>
+<style>
+     #jb-container {
+       width: 940px;
+       margin: 10px auto;
+       padding: 20px;
+       border: 1px solid #bcbcbc;
+     }
+     #jb-header {
+       padding: 20px;
+       margin-bottom: 20px;
+       border: 1px solid #bcbcbc;
+     }
+     #jb-content {
+       width: 580px;
+       padding: 20px;
+       margin-bottom: 20px;
+       float: left;
+       border: 1px solid #bcbcbc;
+     }
+     #jb-sidebar {
+       width: 260px;
+       padding: 20px;
+       margin-bottom: 20px;
+       float: right;
+       border: 1px solid #bcbcbc;
+     }
+     #jb-footer {
+       clear: both;
+       padding: 20px;
+       border: 1px solid #bcbcbc;
+     }
+     @media ( max-width: 480px ) {
+       #jb-container {
+         width: auto;
+       }
+       #jb-content {
+         float: none;
+         width: auto;
+       }
+       #jb-sidebar {
+         float: none;
+         width: auto;
+       }
+     }
+   </style>
+<body>
+
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="Home.html"><img src = castle.png style="wideth:50px; height:50px;border:0;" alt="Slottet" />&nbsp;SLOTTET</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Event.php">Event</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Schedule.html">Schedule</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+
+    <div class="jumbotron">
+      <h1 class="display-4 text-right">Velkommen, Slottet!</h1>
+      <p class="lead text-right">Come in, enjoy-!</p>
+      <hr class="my-4">
+      <p class="text-right">This is our homepage.<br /> if you want to open the door, push the below button.<br /> Velkommen til Slottet :)</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Open</a>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="sarah.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Sarah</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="scarlett.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Scarlett</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="hj1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">HyeJung&Ally</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+<div class="container">
+
+ <div id="chart_div"></div>
+</div>
+<div class="bg-purple ">.bg-primary</div>
+<br>
+ <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded shadow-sm" style="bg=rgb(111,71,190);">
+   <img class="mr-3" src="castle_wh.png" alt width="48" height="48" />
+   <div class="lh-100">
+     <h6 class="mb-0 text-white lh-100">Board</h6>
+     <small>Since 2019</small>
+   </div>
+ </div>
+
+  <div class="my-3 p-3 bg-white rounded shadow-sm">
+    <h6 class="border-bottom border-gray pb-w mb-0">Recent updates</h6>
+    <div class="media text-muted pt-3">
+      <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.23.org/2000/svg" preserveAspectRatio="xMidMid slice" focusable="false" role="img" aria=label="Placeholder:32x32"></svg>
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-bolck text-gray-dark">@username</strong>
+        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+      </p>
+    </div>
+      <div class="media text-muted pt-3">
+        <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.23.org/2000/svg" preserveAspectRatio="xMidMid slice" focusable="false" role="img" aria=label="Placeholder:32x32"></svg>
+        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+          <strong class="d-bolck text-gray-dark">@username</strong>
+          Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        </p>
+      </div>
+        <div class="media text-muted pt-3">
+          <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.23.org/2000/svg" preserveAspectRatio="xMidMid slice" focusable="false" role="img" aria=label="Placeholder:32x32"></svg>
+          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-bolck text-gray-dark">@username</strong>
+            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+          </p>
+        </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="pt-4 my-md-5 pt-md-5 board-top">
+    <div class="row">
+      <div class="col-12 col-md">
+        <img class="mb=2" src = "castle.png"  alt width="24" hegiht="24"/>
+        <small class="d-block mb-3 text-muted">© 2017-2019</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li>
+            <a class="text-muted" href="#"></a>
+          </li>
+          <li>
+            <a class="text-muted" href="#"></a>
+          </li>
+          <li>
+            <a class="text-muted" href="#"></a>
+          </li>
+          <li>
+            <a class="text-muted" href="#"></a>
+          </li>
+          <li>
+            <a class="text-muted" href="#"></a>
+          </li>
+        </ul>
+
+      </div>
+      <div class="col-6 col-md">
+        <ul class="list-unstyled text-small">
+          <li>
+            <a class="text-muted" href="#"></a>
+          </li>
+          <li>
+            <a class="text-muted" href="#"></a>
+          </li>
+          <li>
+            <a class="text-muted" href="#"></a>
+          </li>
+          <li>
+            <a class="text-muted" href="#"></a>
+          </li>
+          <li>
+            <a class="text-muted" href="#"></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md">
+        <ul class="list-unstyled text-small">
+          <li>
+            <a class="text-muted" href="#"></a>
+          </li>
+          <li>
+            <a class="text-muted" href="#"></a>
+          </li>
+          <li>
+            <a class="text-muted" href="#"></a>
+          </li>
+          <li>
+            <a class="text-muted" href="#"></a>
+          </li>
+          <li>
+            <a class="text-muted" href="#"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+
+</html>
