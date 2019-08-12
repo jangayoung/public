@@ -1,22 +1,17 @@
 
 * { font-family : monospace }
-.wrap {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-}
 
-.btn {
+
+.btn_min,.btn_hour,.btn_second {
   position: relative;
-  left:200px;
-  top:50px;
+ 
   width: 140px;
   height: 45px;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
+  background-color: #3e6f97;
   font-weight: 500;
   color: white;
   background-color: #3e6f97;
@@ -26,16 +21,22 @@
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
+
+  display: table;
+  margin-top: 100px;
+  margin-left: 10px;
+  margin-right: auto;
+
   }
 
-.btn:hover {
+.btn_min:hover,.btn_hour:hover,.btn_second:hover {
   background-color: #3e6f97;
   box-shadow: 0px 15px 20px #284358;
   color: #fff;
   transform: translateY(-7px);
 }
 
- .hours,.minutes{
+ .hours,.minutes,.seconds{
  max-width:280px;
  height:280px;
   border-radius: 50%;
@@ -69,7 +70,7 @@
 }
 
 
-.MINdiv{
+.MINdiv,.seconds_div{
   font-size: 1em;
   line-height: 0;
   position: relative;
@@ -82,7 +83,7 @@
   
 }
 
-.MINdiv:hover{
+.MINdiv:hover,.seconds_div:hover{
   opacity: 0.5;
   }
   
@@ -217,7 +218,7 @@
   left:calc(140px - 70px);
 }
 
-#minute{
+#minute,#second_picker{
   position: absolute;
   height:95px;
   width:2px;
@@ -245,7 +246,6 @@
   
 }
 
-
 #center{
   position :absolute;
   width:10px;
@@ -259,8 +259,10 @@
   border-radius:50%;
   z-index: 999;
 }
+
 .modal{
-  position: relative;
+  position: absolute;
+  left:300px;
   width: 400px;
   height: 700px;
   background-color:white;
@@ -268,85 +270,31 @@
   box-shadow: 0px 0px 20px #000;
   max-height: calc(100vh - 200px);
   overflow-y: auto;
+  top:0;
 
 }
-.modal>#showday{
-  max-width:400px;
-  height:20px;
+#showclock{
+  background-color: #3e6f97;
+  height:200px;
+  width:400px;
+  font-size:20pt;
   color:white;
   text-align: center;
-  padding-top: 6px;
-  font-size:10pt;
-  background-color:  #30516d;
+  display: table-cell;
+  vertical-align: middle;
 }
-.modal>#showmonth{
-  max-width:400px;
-  height:40px;
-  padding-top:13px;
-  font-size:15pt;
-  text-align: center;
-  color:white;
-  background-color:  #3e6f97; 
-}
-
-.modal>#showdate{
-  max-width:400px;
-  height:60px;
-  font-size:30pt;
-  padding-top:15px;
-  text-align: center;
-
-  color:white;
-  background-color: #3e6f97; 
-}
-
-.modal>#showclock{
-  max-width:400px;
-  height:60px;
-
-  font-size:15pt;
-  text-align: center;
-  color:lightgrey;
-  background-color : #3e6f97; 
-}
-
-#calendar_tb{
-  width:300px;
-  height:300px;
-  color:rgb(117,117,117);
-  text-align: center;
-  padding:1em; 
-}
-#calendar_tb1{
-  padding:1em;
-  font-size:15pt;
-  color:rgb(117,117,117);
-  width:300px;
-
-  
-}
-.modalbtn{
-  text-align: right;
-  padding:2em;
-  position: relative;
- 
-}
-#day{
-    font-weight: bold;
-}
-
-#todayLabel,#calendarYear,#calendarMon{
-  font-weight: bold;
-}
-
-.pop_bt_cancle,.pop_bt_ok{
+.pop_bt_cancle_h,.pop_bt_ok_h,.pop_bt_cancle_s,.pop_bt_ok_s,.pop_bt_cancle_m,.pop_bt_ok_m{
   color:rgb(42,42,42);
   display:inline-block;
   font-size:6pt;
+  float:right;
+  margin: 10px;
+  padding:10px;
+
 
 }
 
-.pop_bt_cancle:after ,.pop_bt_ok:after{
+.pop_bt_cancle_h:after,.pop_bt_ok_h:after,.pop_bt_cancle_s:after,.pop_bt_ok_s:after,.pop_bt_cancle_m:after,.pop_bt_ok_m:after{
   display:block;
   content: '';
   border-bottom: solid 1px #3e6f97;  
@@ -354,40 +302,16 @@
   transition: transform 250ms ease-in-out;
 }
 
-.pop_bt_cancle:hover:after,.pop_bt_ok:hover:after{
+.pop_bt_cancle_h:hover:after,.pop_bt_ok_h:hover:after,.pop_bt_cancle_s:hover:after,.pop_bt_ok_s:hover:after,.pop_bt_cancle_m:hover:after,.pop_bt_ok_m:hover:after{
   transform:scaleX(1);
 }
-.select_Day{
-  background: #6797df;
-  border-radius:50%;
-  color:white;
 
+#print{
 
-}
+  margin-top: 150px;
+  margin-left: 500px;
+  font-size:30pt;
 
-#Cal{
-  float:left;
-  padding:1em;
-}
-#Clo{
-  float: right;
-  padding:1em;
-}
-#Cal:hover,#Clo:hover,#showhour:hover,#showmin:hover{
-  opacity: 0.5;
-}
+  margin-right: auto;
 
-.sel:hover{
-  background-color: #3e6f97; 
-  opacity: 0.5;
-  color:white;
-  border-radius: 50%;
-} 
-#fin{
-  position: relative;
-  left:200px;
-  top:100px;
-  width: 140px;
-  height: 45px;
-  font-size: 20px;
 }
