@@ -1,128 +1,130 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Timepicker_ayoungjang</title>
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-<script src="js/calendar.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Baloo+Tamma|Lobster" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<link rel="stylesheet" href="css/basic.css" />
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+  <script src="js/calendar.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Tamma|Lobster" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/basic.css" />
 
-<meta name="viewport" conetent="initial=scale=1.0,width=device-wdith">
+  <meta name="viewport" conetent="initial=scale=1.0,width=device-wdith">
 
-<button class="btn_hour">Hour</button>
+  <button class="btn_hour">Hour</button>
 
-<button class="btn_min">Minute</button>
+  <button class="btn_min">Minute</button>
 
-<button class="btn_second">second</button>
-<div id = "print">
-<label id="print_h"></label> : 
-<label id="print_m"></label> :
-<label id="print_s"></label>
-</div>
-<div id="myModal_hour" class="modal">
-  <div id="showclock">
-    <span id="showhour_txt_h">00</span> :
-    <span id="showmin_txt_h">00</span> :
-    <span id="showsec_txt_h">00</span>
+  <button class="btn_second">second</button>
+  <div id="print">
+    <label id="print_h"></label> :
+    <label id="print_m"></label> :
+    <label id="print_s"></label>
   </div>
- <div class="hours">
-   HOUR
-        <script>
-          var a;
-          for (var i = 1; i <= 24; i++) {
-            a = i;
-            if (i < 10) a = '0' + a;
+  <div id="myModal_hour" class="modal">
+    <div id="image"><img src="clock_icon.svg" id="image" style="width:50px; height:50px; margin-top:50px;"></div>
+    <div id="showclock">
 
-            if (i < 13) {
-              document.write("<div class='number_h_am' id='number" + i + "'value='" + a + "'>" + i + "</div>");
-            } else {
-              document.write("<div class='number_h_pm' id='number" + i + "'value='" + i + "'>" + i + "</div>");
-            }
+      <span id="showhour_txt_h">00</span> :
+      <span id="showmin_txt_h">00</span> :
+      <span id="showsec_txt_h">00</span>
+    </div>
+    <div class="hours">
+      HOUR
+      <script>
+        var a;
+        for (var i = 1; i <= 24; i++) {
+          a = i;
+          if (i < 10) a = '0' + a;
 
+          if (i < 13) {
+            document.write("<div class='number_h_am' id='number" + i + "'value='" + a + "'>" + i + "</div>");
+          } else {
+            document.write("<div class='number_h_pm' id='number" + i + "'value='" + i + "'>" + i + "</div>");
           }
-        </script>
-        <div id="center"></div>
-        <div id="hour"></div>
-      </div>
-   
-  <div class="modalbtn">
-    <span class="pop_bt_cancle_h" style="font-size: 13pt;">cancel</span>&nbsp;&nbsp;
-    <span class="pop_bt_ok_h" style="font-size: 13pt;">ok</span>
-  </div>
-</div>
 
-
-<!----minutes---->
-<div id="myModal_min" class="modal">
-    <div id="showclock">
-   
-        <span id="showhour_txt_m">00</span> :
-        <span id="showmin_txt_m">00</span> :
-        <span id="showsec_txt_m">00</span>
-      </div>
-<div class="minutes">
-MINUTE
-  <script>
-    for (var i = 0; i < 60; i++) {
-      if (i < 10) i = '0' + i;
-      if (i == 0 || i % 5 == 0) {
-        document.write("<span class='number_h_min' id='minnumber" + i + "'value='" + i + "'>" + i + "</span>");
-      }
-      var m_angle = 90 + (i * 6);
-      document.write("<div class='MINdiv' id='" + i + "' value='" + i + "'style='transform:rotate(" + m_angle +"deg)';>" + i + "</div>");
-    }
-  </script>
-  <div id="center"></div>
-  <div id="minute"></div>
-</div>
-
-<div class="modalbtn">
-<span class="pop_bt_cancle_m" style="font-size: 13pt;">cancel</span>&nbsp;&nbsp;
-<span class="pop_bt_ok_m" style="font-size: 13pt;">ok</span>
-</div>
-</div>
-
-<!--second-->
-
-<div id="myModal_second" class="modal">
-    <div id="showclock">
-   
-        <span id="showhour_txt_s">00</span> :
-        <span id="showmin_txt_s">00</span> :
-        <span id="showsec_txt_s">00</span>
-      </div>
-  <div class="seconds">
-  SECOND
-    <script>
-      for (var i = 0; i < 60; i++) {
-        if (i < 10) i = '0' + i;
-        if (i == 0 || i % 5 == 0) {
-          document.write("<span class='number_h_min' id='minnumber" + i + "'value='" + i + "'>" + i + "</span>");
         }
-        var m_angle = 90 + (i * 6);
-        document.write("<div class='seconds_div' id='" + i + "' value='" + i + "'style='transform:rotate(" + m_angle +"deg)';>" + i + "</div>");
-      }
-    </script>
-    <div id="center"></div>
-    <div id="second_picker"></div>
-  </div>
-  
-  <div class="modalbtn">
-  <span class="pop_bt_cancle_s" style="font-size: 13pt;">cancel</span>&nbsp;&nbsp;
-  <span class="pop_bt_ok_s" style="font-size: 13pt;">ok</span>
-  </div>
+      </script>
+      <div id="center"></div>
+      <div id="hour"></div>
+    </div>
+
+    <div class="modalbtn">
+      <span class="pop_bt_cancle_h" style="font-size: 13pt;">cancel</span>&nbsp;&nbsp;
+      <span class="pop_bt_ok_h" style="font-size: 13pt;">ok</span>
+    </div>
   </div>
 
-<script type="text/javascript">
 
-  $('#myModal_min').hide();
-  $('#myModal_second').hide();
-  $('#myModal_hour').hide();  
+  <!----minutes---->
+  <div id="myModal_min" class="modal">
+    <div id="image"><img src="clock_icon.svg" id="image" style="width:50px; height:50px; margin-top:50px;"></div>
+    <div id="showclock">
+      <span id="showhour_txt_m">00</span> :
+      <span id="showmin_txt_m">00</span> :
+      <span id="showsec_txt_m">00</span>
+    </div>
+    <div class="minutes">
+      MINUTE
+      <script>
+        for (var i = 0; i < 60; i++) {
+          if (i < 10) i = '0' + i;
+          if (i == 0 || i % 5 == 0) {
+            document.write("<span class='number_h_min' id='minnumber" + i + "'value='" + i + "'>" + i + "</span>");
+          }
+          var m_angle = 90 + (i * 6);
+          document.write("<div class='MINdiv' id='" + i + "' value='" + i + "'style='transform:rotate(" + m_angle +
+            "deg)';>" + i + "</div>");
+        }
+      </script>
+      <div id="center"></div>
+      <div id="minute"></div>
+    </div>
 
+    <div class="modalbtn">
+      <span class="pop_bt_cancle_m" style="font-size: 13pt;">cancel</span>&nbsp;&nbsp;
+      <span class="pop_bt_ok_m" style="font-size: 13pt;">ok</span>
+    </div>
+  </div>
 
- 
-</script>
+  <!--second-->
+
+  <div id="myModal_second" class="modal">
+    <div id="image"><img src="clock_icon.svg" id="image" style="width:50px; height:50px; margin-top:50px;"></div>
+    <div id="showclock">
+
+      <span id="showhour_txt_s">00</span> :
+      <span id="showmin_txt_s">00</span> :
+      <span id="showsec_txt_s">00</span>
+    </div>
+    <div class="seconds">
+      SECOND
+      <script>
+        for (var i = 0; i < 60; i++) {
+          if (i < 10) i = '0' + i;
+          if (i == 0 || i % 5 == 0) {
+            document.write("<span class='number_h_min' id='minnumber" + i + "'value='" + i + "'>" + i + "</span>");
+          }
+          var m_angle = 90 + (i * 6);
+          document.write("<div class='seconds_div' id='" + i + "' value='" + i + "'style='transform:rotate(" + m_angle +
+            "deg)';>" + i + "</div>");
+        }
+      </script>
+      <div id="center"></div>
+      <div id="second_picker"></div>
+    </div>
+
+    <div class="modalbtn">
+      <span class="pop_bt_cancle_s" style="font-size: 13pt;">cancel</span>&nbsp;&nbsp;
+      <span class="pop_bt_ok_s" style="font-size: 13pt;">ok</span>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $('#myModal_min').hide();
+    $('#myModal_second').hide();
+    $('#myModal_hour').hide();
+  </script>
 
 </html>
